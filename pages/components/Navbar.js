@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import styles from "../../styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <div className="navbar-container">
-      <navbar>
+    <div className={styles.container}>
+      <div className={styles.navbar}>
         <div className="container pt-3">
           <div className="row">
             <div className="col col-md-12 col-lg-4 d-flex">
@@ -15,7 +16,7 @@ const Navbar = () => {
                 className="img-fluid"
               />
               <h1>
-                <Link href="#">LOG</Link>
+                <Link href="#">LOGO</Link>
               </h1>
             </div>
             <div id="menu" className="col-8 text-uppercase pt-2 pl-5 pr-5">
@@ -28,7 +29,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </navbar>
+      </div>
     </div>
   );
 };

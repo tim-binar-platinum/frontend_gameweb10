@@ -1,5 +1,5 @@
 import { settings } from "./configs/game";
-import "./assets/css/Computer.css";
+import styles from "../../../styles/Game/Computer.module.css";
 
 export const Computer = ({
   botScore,
@@ -10,11 +10,11 @@ export const Computer = ({
   scissorsIcon,
 }) => {
   return (
-    <div className="computer-card">
+    <div className={styles.computerCard}>
       <h1>Computer</h1>
       {botScore < settings.winTarget ? (
         userSelection === "" ? (
-          <h3 className="waiting-message">{settings.waitingMessage}</h3>
+          <h3 className={styles.waitingMessage}>{settings.waitingMessage}</h3>
         ) : (
           <>
             <img

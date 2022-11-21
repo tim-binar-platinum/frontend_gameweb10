@@ -1,13 +1,13 @@
 import { settings } from "./configs/game";
-import "../Game/assets/css/User.css";
+import styles from "../../../styles/Game/User.module.css";
 
 export const User = ({ userScore, userSelection, children }) => {
   return (
-    <div className="user-card">
+    <div className={styles.userCard}>
       <h1>{settings.userName}</h1>
       {userScore < settings.winTarget ? (
         <>
-          <div className="choice-grid">{children}</div>
+          <div className={styles.choiceGrid}>{children}</div>
           <h3>
             {userSelection === ""
               ? "Pick one!"

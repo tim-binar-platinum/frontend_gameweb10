@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import { Title } from "./components/Game/Title";
 import { Round } from "./components/Game/Round";
 import { Playground } from "./components/Game/Playground";
@@ -10,10 +11,13 @@ import { Score } from "./components/Game/Score";
 import { Message } from "./components/Game/Message";
 import { Reset } from "./components/Game/Reset";
 import { settings } from "./components/Game/configs/game";
-import rock from "./components/Game/assets/image/batu.png";
-import paper from "./components/Game/assets/image/kertas.png";
-import scissors from "./components/Game/assets/image/gunting.png";
-import "./components/Game/assets/css/styles.css";
+
+import rock from "../public/Game/batu.png";
+import paper from "../public/Game/kertas.png";
+import scissors from "../public/Game/gunting.png";
+
+import styles from "../styles/Game/GameSuit.module.css";
+
 import axios from "axios";
 
 export default function GameDetailPages() {
@@ -40,11 +44,17 @@ export default function GameDetailPages() {
 
   const { winMessage, tieMessage, lostMessage, winTarget } = settings;
   const { botScore, userScore } = game;
-  const token = sessionStorage.getItem("accessToken");
-  console.log(token);
-  const config = {
-    headers: { Authorization: `Bearer ${token}` },
-  };
+
+  // useEffect(() => {
+  //   const token = sessionStorage.getItem("accessToken");
+  // }, []);
+
+  // console.log(token);
+
+  // const config = {
+  //   headers: { Authorization: `Bearer ${token}` },
+  // };
+
   const play = async (e) => {
     if (botScore < winTarget) {
       const userSelection = e.target.parentNode.getAttribute("value");
@@ -93,7 +103,7 @@ export default function GameDetailPages() {
   };
 
   return (
-    <div id="suit" className="GameDetailPages">
+    <div id={styles.suit} className={styles.gamePages}>
       <Title />
       <Round {...game} />
       <Playground>

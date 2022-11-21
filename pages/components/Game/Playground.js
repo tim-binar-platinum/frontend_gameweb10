@@ -1,5 +1,5 @@
-import "../Game/assets/css/Playground.css";
+import styles from "../../../styles/Game/Playground.module.css";
 
 export const Playground = ({ children }) => {
-  return <div className="play-area">{children}</div>;
+  return <div className={styles.playArea}>{children}</div>;
 };

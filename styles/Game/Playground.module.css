@@ -1,11 +1,11 @@
-.play-area {
+.playArea {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
-/*   margin-bottom: 30px; */
+  /*   margin-bottom: 30px; */
 }
 
 @media only screen and (max-width: 700px) {
-  .play-area {
+  .playArea {
     grid-template-columns: 1fr;
   }
 }

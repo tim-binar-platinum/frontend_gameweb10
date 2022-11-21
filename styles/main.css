@@ -1,10 +1,6 @@
-.navbar {
-  padding: 15px, 0, 15px, 0;
-}
-
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../image/videogames.jpg");
+    url("../public//image/videogames.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
