@@ -1,4 +1,4 @@
-import styles from "../Game/assets/css/Choice.module.css";
+import styles from "../../../styles/Game/Choice.module.css";
 import Image from "next/image";
 
 export const Choice = ({ value, choiceIcon, onClick }) => {

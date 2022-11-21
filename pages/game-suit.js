@@ -14,7 +14,7 @@ import { settings } from "./components/Game/configs/game";
 
 import rock from "../public/Game/batu.png";
 import paper from "../public/Game/kertas.png";
-import scissors from "../public/Game/.png";
+import scissors from "../public/Game/gunting.png";
 
 import styles from "../styles/Game/GameSuit.module.css";
 
