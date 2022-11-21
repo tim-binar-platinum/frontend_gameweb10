@@ -1,4 +1,4 @@
-.reset-btn {
+.reset {
   display: grid;
   place-items: center;
   width: 200px;
@@ -9,7 +9,7 @@
   transition: transform 0.5s;
 }
 
-.reset-btn:hover {
+.reset:hover {
   cursor: pointer;
   transform: scale(1.1);
 }

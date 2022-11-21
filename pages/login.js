@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import Link from "next/link";
+import Image from "next/image";
 import Input from "./components/Input";
 import art from "../public/image/landingpage-art.png";
 
@@ -43,7 +45,7 @@ const Login = () => {
         <div className="container py-5 h-100">
           <div className="row d-flex align-items-center justify-content-center h-100">
             <div className="col-md-8 col-lg-7 col-xl-6">
-              <img src={art} className="img-fluid" alt="phone" />
+              <Image src={art} className="img-fluid" alt="phone" />
             </div>
             <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
               <form onSubmit={handleLogin}>
