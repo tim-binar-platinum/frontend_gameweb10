@@ -45,15 +45,14 @@ export default function GameDetailPages() {
   const { winMessage, tieMessage, lostMessage, winTarget } = settings;
   const { botScore, userScore } = game;
 
-  // useEffect(() => {
-  //   const token = sessionStorage.getItem("accessToken");
-  // }, []);
+  useEffect(() => {}, []);
 
-  // console.log(token);
+  const token = sessionStorage.getItem("accessToken");
+  console.log(token);
 
-  // const config = {
-  //   headers: { Authorization: `Bearer ${token}` },
-  // };
+  const config = {
+    headers: { Authorization: `Bearer ${token}` },
+  };
 
   const play = async (e) => {
     if (botScore < winTarget) {
