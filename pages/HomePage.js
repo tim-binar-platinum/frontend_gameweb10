@@ -2,7 +2,7 @@
 import React from "react";
 import "../styles/landingpage.css";
 import art from "../public/image/landingpage-art.png";
-import { Navbar, Container, NavDropdown } from "reactstrap";
+import { Navbar } from "reactstrap";
 const HomePage = () => {
   return (
     <div>
