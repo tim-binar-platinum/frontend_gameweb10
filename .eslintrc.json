@@ -20,5 +20,6 @@
     // disable rules from base configurations
     "for-direction": "off",
     "react/prop-types": "off"
+    "react/jsx-runtime": "off"
   }
 }
