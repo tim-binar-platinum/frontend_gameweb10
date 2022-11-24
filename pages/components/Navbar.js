@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../../styles/Navbar.module.css";
+// import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 const Navbar = () => {
   return (
@@ -23,7 +25,13 @@ const Navbar = () => {
               <ul className="d-lg-flex d-md-block justify-content-between">
                 <Link href="/about">about</Link>
                 <Link href="/game-list">game list</Link>
-                <Link href="/login">login</Link>
+                <button
+                  onClick={() => {
+                    signIn();
+                  }}
+                >
+                  login
+                </button>
                 <Link href="/register">register</Link>
               </ul>
             </div>
