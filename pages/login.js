@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from "react";
 
 import Link from "next/link";
@@ -5,14 +6,14 @@ import Image from "next/image";
 import Input from "./components/Input";
 import art from "../public/image/landingpage-art.png";
 
-const Login = () => {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleLogin = (e) => {
     e.preventDefault();
     const data = {
       username: email,
-      password: password,
+      password,
     };
     fetch("http://103.181.143.76:4000/login", {
       method: "POST",
@@ -23,6 +24,7 @@ const Login = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
+      // eslint-disable-next-line consistent-return
       .then((st) => {
         console.log(st);
         if (st.msg === "data tidak ada") {
@@ -35,7 +37,7 @@ const Login = () => {
         alert("login sukses");
         console.log(
           "token di session storage",
-          sessionStorage.getItem("accessToken")
+          sessionStorage.getItem("accessToken"),
         );
       });
   };
@@ -51,16 +53,16 @@ const Login = () => {
               <form onSubmit={handleLogin}>
                 {/* Email input */}
                 <Input
-                  type={"text"}
-                  title={"username"}
-                  id={"email"}
+                  type="text"
+                  title="username"
+                  id="email"
                   set={(e) => setEmail(e.target.value)}
                 />
                 {/* Password input */}
                 <Input
-                  type={"password"}
-                  title={"password"}
-                  id={"password"}
+                  type="password"
+                  title="password"
+                  id="password"
                   set={(e) => setPassword(e.target.value)}
                 />
                 <div>
@@ -73,6 +75,8 @@ const Login = () => {
                 >
                   Sign in
                 </button>
+                {" "}
+&nbsp;
                 <Link href="/register">
                   <button
                     type="submit"
@@ -88,6 +92,6 @@ const Login = () => {
       </section>
     </div>
   );
-};
+}
 
 export default Login;

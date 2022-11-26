@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable import/no-duplicates */
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -10,7 +12,7 @@ import Gallery4 from "../public/image/coming-soon.jpg";
 import Gallery5 from "../public/image/coming-soon.jpg";
 import Gallery6 from "../public/image/coming-soon.jpg";
 
-const Gallery = () => {
+function Gallery() {
   return (
     <div className="gallery min-vh-100 d-flex align-items-center" id="gallery">
       <Container>
@@ -78,6 +80,6 @@ const Gallery = () => {
       </Container>
     </div>
   );
-};
+}
 
 export default Gallery;

@@ -1,11 +1,13 @@
 import React from "react";
-import { Container, Row, Col, Accordion } from "react-bootstrap";
+import {
+  Container, Row, Col, Accordion,
+} from "react-bootstrap";
 
-const Faq = () => {
+function Faq() {
   return (
     <div className="faq" id="faq">
-      <Container data-aos="fade-down">
-        <Row className="mb-5">
+      <Container data-aos="fade-up">
+        <Row className="mb-3">
           <Col>
             <h2 className="text-center fw-bold">
               Frequently Answer & Question
@@ -54,6 +56,6 @@ const Faq = () => {
       </Container>
     </div>
   );
-};
+}
 
 export default Faq;

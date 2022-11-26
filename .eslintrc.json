@@ -19,6 +19,7 @@
 
     // disable rules from base configurations
     "for-direction": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": "off"
   }
 }
