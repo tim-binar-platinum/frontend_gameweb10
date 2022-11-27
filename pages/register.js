@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable no-console */
 /* eslint-disable no-alert */
 /* eslint-disable react/jsx-no-bind */
@@ -11,6 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import "../styles/register.module.css";
 
 export default function Create() {
   const [formInput, setFormInput] = useState({
