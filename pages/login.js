@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
 import Input from "./components/Input";
@@ -14,6 +13,8 @@ const Login = () => {
       username: email,
       password: password,
     };
+    console.log(data);
+
     fetch("http://103.181.143.76:4000/login", {
       method: "POST",
       headers: {

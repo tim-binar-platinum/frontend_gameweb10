@@ -92,7 +92,7 @@ export default function Create() {
       });
     console.log(response.data.jwt);
     localStorage.setItem("items", JSON.stringify(response.data.jwt));
-    localStorage.getItem("item");
+    localStorage.getItem("items");
   };
 
   return (
