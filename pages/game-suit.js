@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Title } from "./components/Game/Title";
 import { Round } from "./components/Game/Round";
@@ -45,15 +45,12 @@ export default function GameDetailPages() {
   const { winMessage, tieMessage, lostMessage, winTarget } = settings;
   const { botScore, userScore } = game;
 
-  // useEffect(() => {
-  //   const token = sessionStorage.getItem("accessToken");
-  // }, []);
+  const token = sessionStorage.getItem("accessToken");
+  console.log(token);
 
-  // console.log(token);
-
-  // const config = {
-  //   headers: { Authorization: `Bearer ${token}` },
-  // };
+  const config = {
+    headers: { Authorization: `Bearer ${token}` },
+  };
 
   const play = async (e) => {
     if (botScore < winTarget) {

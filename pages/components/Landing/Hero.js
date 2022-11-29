@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import "animate.css";
 
 const Hero = () => {
   return (

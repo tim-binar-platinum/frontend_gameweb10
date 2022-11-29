@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
+
 const Faq = () => {
   return (
     <div className="faq" id="faq">
@@ -17,8 +18,9 @@ const Faq = () => {
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Cara Bermain?</Accordion.Header>
                 <Accordion.Body>
-                  Apakah anda sudah membuat akun? Jika ya silahkan klik login dan web games sudah bisa dimainkan.
-                  Jika belum memiliki akun harap membuat dahulu dengan meng-klik register.
+                  Apakah anda sudah membuat akun? Jika ya silahkan klik login
+                  dan web games sudah bisa dimainkan. Jika belum memiliki akun
+                  harap membuat dahulu dengan meng-klik register.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -26,9 +28,11 @@ const Faq = () => {
           <Col>
             <Accordion>
               <Accordion.Item eventKey="1">
-                <Accordion.Header>Apakah untuk bermain games memerlukan internet?</Accordion.Header>
+                <Accordion.Header>
+                  Apakah untuk bermain games memerlukan internet?
+                </Accordion.Header>
                 <Accordion.Body>
-                    Ya, untuk bermain games memerlukan akses internet.
+                  Ya, untuk bermain games memerlukan akses internet.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -36,9 +40,12 @@ const Faq = () => {
           <Col>
             <Accordion>
               <Accordion.Item eventKey="2">
-                <Accordion.Header>Bagaimana dengan fitur yang disediakan?</Accordion.Header>
+                <Accordion.Header>
+                  Bagaimana dengan fitur yang disediakan?
+                </Accordion.Header>
                 <Accordion.Body>
-                    Kami menyediakan fitur Leaderboard dan bisa dishare ke akun sosial media anda dan tunggu untuk fitur - fitur lainnya juga.
+                  Kami menyediakan fitur Leaderboard dan bisa dishare ke akun
+                  sosial media anda dan tunggu untuk fitur - fitur lainnya juga.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
