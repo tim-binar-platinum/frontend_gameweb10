@@ -14,7 +14,7 @@ function Faq() {
             </h2>
           </Col>
         </Row>
-        <Row className="row-cols-lg-2 row-cols-md-2 row-cols-1 g-4 mb-5">
+        <Row className="row-cols-lg-2 row-cols-md-2 row-cols-1 g-4 mb-5 fs-3">
           <Col>
             <Accordion>
               <Accordion.Item eventKey="0">
@@ -47,7 +47,7 @@ function Faq() {
                 </Accordion.Header>
                 <Accordion.Body>
                   Kami menyediakan fitur Leaderboard dan bisa dishare ke akun
-                  sosial media anda dan tunggu untuk fitur - fitur lainnya juga.
+                  sosial media anda dan tunggu untuk fitur - fitur lainnya.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
