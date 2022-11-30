@@ -10,8 +10,6 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      {" "}
-&nbsp;
       <Service />
       <Faq />
       <Footer />
