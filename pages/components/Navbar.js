@@ -23,17 +23,9 @@ function Navbar() {
             <div id="menu" className="col-8 d-flex text-uppercase pl-5 pr-3">
               <ul className="d-lg-flex d-md-block justify-content-between">
                 <Link href="/about">about</Link>
-                {" "}
-&nbsp;
                 <Link href="/game-list">game list</Link>
-                {" "}
-&nbsp;
                 <Link href="/login">login</Link>
-                {" "}
-&nbsp;
                 <Link href="/register">register</Link>
-                {" "}
-&nbsp;
               </ul>
             </div>
           </div>
