@@ -20,7 +20,7 @@ function Navbar() {
                 <Link href="/">Last of Game</Link>
               </h1>
             </div>
-            <div id="menu" className="col-8 text-uppercase pt-2 pl-5 pr-5">
+            <div id="menu" className="col-8 d-flex text-uppercase pl-5 pr-3">
               <ul className="d-lg-flex d-md-block justify-content-between">
                 <Link href="/about">about</Link>
                 {" "}

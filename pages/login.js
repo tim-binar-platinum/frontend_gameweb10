@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Input from "./components/Input";
 import art from "../public/image/landingpage-art.png";
-import "../styles/login.module.css";
+import styles from "../styles/login.module.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -44,14 +44,14 @@ function Login() {
       });
   };
   return (
-    <div>
+    <div id={styles.login}>
       <section className="vh-100">
         <div className="container py-5 h-100">
           <div className="row d-flex align-items-center justify-content-center h-100">
             <div className="col-md-8 col-lg-7 col-xl-6">
               <Image src={art} className="img-fluid" alt="phone" />
             </div>
-            <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1 text-white">
               <form onSubmit={handleLogin}>
                 {/* Email input */}
                 <Input

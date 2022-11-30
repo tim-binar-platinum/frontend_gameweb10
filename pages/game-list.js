@@ -3,10 +3,10 @@
 /* eslint-disable import/no-duplicates */
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/game-list.module.css";
 
 import Link from "next/link";
 import Image from "next/image";
+import styles from "../styles/game-list.module.css";
 import Gallery1 from "../public/image/suit.jpg";
 import Gallery2 from "../public/image/tictactoe.jpg";
 import Gallery3 from "../public/image/dadu.jpg";
@@ -16,7 +16,7 @@ import Gallery6 from "../public/image/strategy.jpg";
 
 function Gallery() {
   return (
-    <div className="gallery min-vh-100 d-flex align-items-center" id="gallery">
+    <div className="gallery min-vh-100 d-flex align-items-center" id={styles.gallery}>
       <Container>
         <Row
           className="row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 g-4"
@@ -30,7 +30,7 @@ function Gallery() {
                 className="w-100"
                 height={200}
               />
-              <p className="text-center fw-bold">Rock Paper Scisor</p>
+              <p className="text-center text-white fw-bold fs-1">Rock Paper Scisor</p>
             </Link>
           </Col>
           <Col>
@@ -40,7 +40,7 @@ function Gallery() {
               className="w-100"
               height={200}
             />
-            <p className="text-center fw-bold">Tic Tac Toe</p>
+            <p className="text-center text-white fw-bold fs-1">Tic Tac Toe</p>
           </Col>
           <Col>
             <Image
@@ -49,7 +49,7 @@ function Gallery() {
               className="w-100"
               height={200}
             />
-            <p className="text-center fw-bold">Tebak Dadu</p>
+            <p className="text-center text-white fw-bold fs-1">Tebak Dadu</p>
           </Col>
           <Col>
             <Image
@@ -58,7 +58,7 @@ function Gallery() {
               className="w-100"
               height={200}
             />
-            <p className="text-center fw-bold">Kick Dummy</p>
+            <p className="text-center text-white fw-bold fs-1">Kick Dummy</p>
           </Col>
           <Col>
             <Image
@@ -67,7 +67,7 @@ function Gallery() {
               className="w-100"
               height={200}
             />
-            <p className="text-center fw-bold">Type Attack</p>
+            <p className="text-center text-white fw-bold fs-1">Type Attack</p>
           </Col>
           <Col>
             <Image
@@ -76,7 +76,7 @@ function Gallery() {
               className="w-100"
               height={200}
             />
-            <p className="text-center fw-bold">Punish & Enslave</p>
+            <p className="text-center text-white fw-bold fs-1">Punish & Enslave</p>
           </Col>
         </Row>
       </Container>

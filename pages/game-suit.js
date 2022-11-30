@@ -1,3 +1,7 @@
+/* eslint-disable no-console */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable no-nested-ternary */
+/* eslint-disable no-unused-expressions */
 import React, { useState } from "react";
 
 import axios from "axios";

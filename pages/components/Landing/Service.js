@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function Service() {
   return (
-    <div className="service min-vh-100 d-flex align-items-center" id="service">
+    <div className="service min-vh-50 d-flex align-items-center" id="service">
       <Container data-aos="fade-up">
         <Row>
           <Col>

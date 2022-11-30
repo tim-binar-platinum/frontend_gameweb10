@@ -18,9 +18,13 @@
   height: 200px;
 }
 
+.service{
+  padding-bottom: 25px;
+}
+
 .faq {
   padding-top: 25px;
-  padding-bottom: 100px;
+  padding-bottom: 25px;
 }
 
 .faq .accordion {
