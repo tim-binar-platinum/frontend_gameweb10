@@ -1,6 +1,6 @@
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../public//image/videogames.jpg");
+    url("../public/image/videogames.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
