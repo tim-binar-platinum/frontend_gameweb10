@@ -1,9 +1,4 @@
-/* eslint-disable no-shadow */
-/* eslint-disable no-console */
-/* eslint-disable no-alert */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/react-in-jsx-scope */
+
 import {
   Button, Container, Form, Label, Input, FormGroup,
 } from "reactstrap";
