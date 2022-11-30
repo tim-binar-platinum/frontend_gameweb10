@@ -2,10 +2,12 @@ import {Button, Container, Form, Label, Input, FormGroup} from "reactstrap"
 import { useState, forwardRef } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import axios from "axios";
+import { useRouter } from "next/router";
+import axiosConfig from "./api/axiosConfig";
 import { useForm } from "react-hook-form";
 
 export default function Create () {
+  const router = useRouter()
   const [formInput, setFormInput] = useState({
     email: '',
     name: '',
@@ -70,7 +72,7 @@ export default function Create () {
     return alert("mohon isi email");
   }
    console.log(formInput, dateData, genderData)
-   const response = await axios.post('http://103.181.143.76:4000/register', 
+   await axiosConfig.post('/register', 
       {
         email: formInput.email,
         name: formInput.name,
@@ -81,15 +83,16 @@ export default function Create () {
         gender: 'male'
       })
       .then(function (response) {
+        // const res = response.json()
         console.log(response)
-        return alert("akun berhasil dibuat");
+        alert('akun telah dibuat')
+        router.push('/login')
       })
       .catch(function (error) {
-        console.log(error);
+        console.log(error.message);
+        return alert('username telah dipakai')
       });
-    console.log(response.data.jwt)
-    localStorage.setItem('items', JSON.stringify(response.data.jwt));
-    localStorage.getItem('item')
+
   }
     
   return (

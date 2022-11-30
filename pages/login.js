@@ -1,43 +1,42 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import Input from "./components/Input";
 import art from "../public/image/landingpage-art.png";
+import axiosConfig from "./api/axiosConfig";
+
+
 
 const Login = () => {
+  const router = useRouter()
+  const [token, setToken] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = (e) => {
+  useEffect(() => {
+    localStorage.setItem("token", JSON.stringify(token));
+  }, [token]);
+
+  const handleLogin = async (e) => {
     e.preventDefault();
     const data = {
       username: email,
       password: password,
     };
-    fetch("http://103.181.143.76:4000/login", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+    await axiosConfig.post('/login', {
+      username: data.username,
+      password: data.password
     })
-      .then((res) => res.json())
-      .then((st) => {
-        console.log(st);
-        if (st.msg === "data tidak ada") {
-          return alert("pengguna tidak ada");
-        }
-        if (st.msg === "password salah") {
-          return alert("password salah");
-        }
-        sessionStorage.setItem("accessToken", st.token);
-        alert("login sukses");
-        console.log(
-          "token di session storage",
-          sessionStorage.getItem("accessToken")
-        );
-      });
+    .then(function (response) {
+      console.log(response)
+      alert("login berhasil")
+      setToken(response.data.token)
+      router.push('/')
+    })
+    .catch(function (error) {
+      console.log(error);
+      return alert("username atau password salah")
+    });
   };
   return (
     <div>
