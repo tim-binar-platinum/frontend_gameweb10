@@ -1,18 +1,20 @@
 import React from "react";
-import { Container, Row, Col, Accordion } from "react-bootstrap";
+import {
+  Container, Row, Col, Accordion,
+} from "react-bootstrap";
 
-const Faq = () => {
+function Faq() {
   return (
     <div className="faq" id="faq">
-      <Container data-aos="fade-down">
-        <Row className="mb-5">
+      <Container data-aos="fade-up">
+        <Row className="mb-3">
           <Col>
             <h2 className="text-center fw-bold">
               Frequently Answer & Question
             </h2>
           </Col>
         </Row>
-        <Row className="row-cols-lg-2 row-cols-md-2 row-cols-1 g-4 mb-5">
+        <Row className="row-cols-lg-2 row-cols-md-2 row-cols-1 g-4 mb-5 fs-3">
           <Col>
             <Accordion>
               <Accordion.Item eventKey="0">
@@ -45,7 +47,7 @@ const Faq = () => {
                 </Accordion.Header>
                 <Accordion.Body>
                   Kami menyediakan fitur Leaderboard dan bisa dishare ke akun
-                  sosial media anda dan tunggu untuk fitur - fitur lainnya juga.
+                  sosial media anda dan tunggu untuk fitur - fitur lainnya.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -54,6 +56,6 @@ const Faq = () => {
       </Container>
     </div>
   );
-};
+}
 
 export default Faq;

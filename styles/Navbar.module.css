@@ -1,6 +1,6 @@
 .container {
-  background-color: rgba(8, 8, 8, 0.75);
-  height: 80px;
+  background-color: rgb(255, 255, 255);
+  height: 95px;
 }
 
 .navbar h1 a {
@@ -15,9 +15,11 @@
   font-weight: bold;
   color: #2da0f8;
   text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px
 }
 
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   .navbar ul a {
     font-size: 4vw;
   }

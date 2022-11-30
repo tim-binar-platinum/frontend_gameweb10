@@ -1,34 +1,41 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook, FaTwitter, FaInstagram, FaYoutube,
+} from "react-icons/fa";
 
-const Footer = () => {
+function Footer() {
   return (
     <div className="footer pb-3 pt-4">
-      <Container>
+      <Container data-aos="fade-right">
         <Row>
           <Col>
             <h3 className="fw-bold text-white">Last of Game</h3>
           </Col>
           <Col className="text-end">
-            <a href="facebook.com" class="fs-1 text-white mx-lg-3">
+            <a href="facebook.com" className="fs-1 text-white mx-lg-3">
               <FaFacebook />
             </a>
+            {" "}
+            &nbsp;
             <a
               href="twitter.com"
-              class="fa-brands fa-twitter fs-1 text-white mx-lg-3"
+              className="fa-brands fa-twitter fs-1 text-white mx-lg-3"
             >
               <FaTwitter />
             </a>
+&nbsp;
             <a
               href="instagram.com"
-              class="fa-brands fa-instagram fs-1 text-white mx-lg-3"
+              className="fa-brands fa-instagram fs-1 text-white mx-lg-3"
             >
               <FaInstagram />
             </a>
+            {" "}
+&nbsp;
             <a
               href="youtube.com"
-              class="fa-brands fa-youtube fs-1 text-white mx-lg-3"
+              className="fa-brands fa-youtube fs-1 text-white mx-lg-3"
             >
               <FaYoutube />
             </a>
@@ -44,6 +51,6 @@ const Footer = () => {
       </Container>
     </div>
   );
-};
+}
 
 export default Footer;

@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
 import styles from "../../styles/Navbar.module.css";
 
-const Navbar = () => {
+function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
@@ -16,15 +17,23 @@ const Navbar = () => {
                 className="img-fluid"
               />
               <h1>
-                <Link href="#">LOGO</Link>
+                <Link href="/">Last of Game</Link>
               </h1>
             </div>
-            <div id="menu" className="col-8 text-uppercase pt-2 pl-5 pr-5">
+            <div id="menu" className="col-8 d-flex text-uppercase pl-5 pr-3">
               <ul className="d-lg-flex d-md-block justify-content-between">
                 <Link href="/about">about</Link>
+                {" "}
+&nbsp;
                 <Link href="/game-list">game list</Link>
+                {" "}
+&nbsp;
                 <Link href="/login">login</Link>
+                {" "}
+&nbsp;
                 <Link href="/register">register</Link>
+                {" "}
+&nbsp;
               </ul>
             </div>
           </div>
@@ -32,6 +41,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Navbar;
