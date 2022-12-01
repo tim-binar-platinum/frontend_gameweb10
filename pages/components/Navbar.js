@@ -1,9 +1,45 @@
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "../../styles/Navbar.module.css";
+import axiosConfig from "../api/axiosConfig";
 
-function Navbar() {
+const Navbar = () => {
+  const [token, setToken] = useState();
+  const [user, setUser] = useState();
+  let config;
+
+  useEffect(() => {
+    const item = JSON.parse(localStorage.getItem("token"));
+    console.log('ini token', item)
+    if (item) {
+      setToken(item);
+    }
+  },);
+
+  const userData = async () =>  {
+    console.log('ini config', config)
+    const {data} = await axiosConfig.get(
+    "/users/profile",
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+    );
+    setUser(data.data);
+  }
+
+  useEffect(() => {
+    if(!token) {
+      return
+    } else {
+      userData()
+    }
+  }, [token])
+
+  const logout = async () => {
+    localStorage.removeItem('token');
+    window.location.reload(false);    
+  }
+  console.log(user)
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
@@ -24,8 +60,20 @@ function Navbar() {
               <ul className="d-lg-flex d-md-block justify-content-between">
                 <Link href="/about">about</Link>
                 <Link href="/game-list">game list</Link>
-                <Link href="/login">login</Link>
-                <Link href="/register">register</Link>
+                {token?                
+                (
+                  <>
+                  {/* <h3 class="sign"> hello! </h3> */}
+                  <h3 className="profile">welcome &nbsp; {user?.username}</h3>
+                  <Link href="/" onClick={logout}>logout</Link>
+                  </>
+                ) : 
+                (
+                  <>
+                    <Link href="/login">login</Link>
+                    <Link href="/register">register</Link>
+                </>
+                )}
               </ul>
             </div>
           </div>

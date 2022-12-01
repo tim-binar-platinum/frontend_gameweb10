@@ -4,6 +4,7 @@ import Service from "./components/Landing/Service";
 import Faq from "./components/Landing/Faq";
 import Footer from "./components/Landing/Footer";
 import Navbar from "./components/Navbar";
+import LeaderBoard from "./components/Landing/LeaderBoard";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Service />
       <Faq />
+      <LeaderBoard />
       <Footer />
     </div>
   );
