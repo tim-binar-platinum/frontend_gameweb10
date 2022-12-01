@@ -17,8 +17,6 @@ import scissors from "../public/Game/gunting.png";
 
 import styles from "../styles/Game/GameSuit.module.css";
 
-import axios from "axios";
-
 export default function GameDetailPages() {
   const [token, setToken] = useState();
   const [user, setUser] = useState();
@@ -103,17 +101,17 @@ export default function GameDetailPages() {
             ...(await axiosConfig.post(
               "/game",
               { status: "win" },
-              config
+              config,
             )),
             ...userData(),
           })
-        : setGame({
+          : setGame({
             ...(game.botScore += 1),
             ...(game.message = lostMessage),
             ...(await axiosConfig.post(
               "/game",
               { status: "lose" },
-              config
+              config,
             )),
             ...userData(),
           });

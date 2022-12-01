@@ -5,6 +5,8 @@ import DatePicker from "react-datepicker";
 import { useRouter } from "next/router";
 import axiosConfig from "./api/axiosConfig";
 import { useForm } from "react-hook-form";
+import styles from "../styles/register.module.css";
+
 
 export default function Create () {
   const router = useRouter()
@@ -96,6 +98,7 @@ export default function Create () {
   }
     
   return (
+    <div className={styles.register}>
     <Container style={{paddingLeft:"10%", paddingRight:"10%"}} className="d-flex flex-column justify-content-center align-items-center">
       <Container className="d-flex justify-content-center h1 pb-3">REGISTER NEW PLAYER</Container>
       <Container style={{maxWidth: "500px"}} className="bg-light border p-5">
@@ -196,5 +199,6 @@ export default function Create () {
         </Form>
       </Container>
     </Container>
+    </div>
   )
 }

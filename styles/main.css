@@ -18,9 +18,13 @@
   height: 200px;
 }
 
+.service{
+  padding-bottom: 25px;
+}
+
 .faq {
-  padding-top: 100px;
-  padding-bottom: 150px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .faq .accordion {
@@ -46,6 +50,7 @@
     padding-top: 100px;
   }
   .faq {
-    padding-top: 100px;
+    padding-top: 25px;
+    padding-bottom: 100px;
   }
 }

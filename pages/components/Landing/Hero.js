@@ -1,8 +1,10 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import {
+  Container, Row, Col, Button,
+} from "react-bootstrap";
 import "animate.css";
 
-const Hero = () => {
+function Hero() {
   return (
     <div className="hero min-vh-100 w-100" id="home">
       <div>
@@ -16,7 +18,7 @@ const Hero = () => {
                 </h1>
               </div>
               <div className="mt-4 text-center animate__animated animate__fadeInUp">
-                <Button type="Button" class="btn btn-primary">
+                <Button type="Button" class="btn btn-primary btn-lg">
                   Play Games
                 </Button>
               </div>
@@ -26,6 +28,6 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Hero;

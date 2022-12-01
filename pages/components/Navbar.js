@@ -53,19 +53,21 @@ const Navbar = () => {
                 className="img-fluid"
               />
               <h1>
-                <Link href="#">LOGO</Link>
+                <Link href="/">Last of Game</Link>
               </h1>
             </div>
-            <div id="menu" className="col-8 text-uppercase pt-2 pl-5 pr-5">
+            <div id="menu" className="col-8 d-flex text-uppercase pl-5 pr-3">
               <ul className="d-lg-flex d-md-block justify-content-between">
                 <Link href="/about">about</Link>
+                {" "}
+&nbsp;
                 <Link href="/game-list">game list</Link>
                 {token?                
                 (
                   <>
-                  <Link href="/" onClick={logout}>logout</Link>
                   {/* <h3 class="sign"> hello! </h3> */}
                   <h3 className="profile">welcome &nbsp; {user?.username}</h3>
+                  <Link href="/" onClick={logout}>logout</Link>
                   </>
                 ) : 
                 (
@@ -81,6 +83,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Navbar;
