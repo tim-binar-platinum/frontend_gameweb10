@@ -74,8 +74,6 @@ const Login = () => {
                 >
                   Sign in
                 </button>
-                {" "}
-&nbsp;
                 <Link href="/register">
                   <button
                     type="submit"

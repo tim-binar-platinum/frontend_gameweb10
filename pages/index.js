@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+
 import Hero from "./components/Landing/Hero";
 import Service from "./components/Landing/Service";
 import Faq from "./components/Landing/Faq";
@@ -11,8 +11,6 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      {" "}
-&nbsp;
       <Service />
       <Faq />
       <LeaderBoard />

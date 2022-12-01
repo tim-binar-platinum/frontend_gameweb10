@@ -1,10 +1,10 @@
-// {
-//   "extends": [
-//     "next/core-web-vitals",
-//     "eslint:recommended",
-//     "prettier",
-//     "airbnb"
-//   ],
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "prettier"
+    // "airbnb"
+  ],
 
 //   "rules": {
 //     // enable additional rules

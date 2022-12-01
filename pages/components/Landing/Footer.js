@@ -16,23 +16,18 @@ function Footer() {
             <a href="facebook.com" className="fs-1 text-white mx-lg-3">
               <FaFacebook />
             </a>
-            {" "}
-            &nbsp;
             <a
               href="twitter.com"
               className="fa-brands fa-twitter fs-1 text-white mx-lg-3"
             >
               <FaTwitter />
             </a>
-&nbsp;
             <a
               href="instagram.com"
               className="fa-brands fa-instagram fs-1 text-white mx-lg-3"
             >
               <FaInstagram />
             </a>
-            {" "}
-&nbsp;
             <a
               href="youtube.com"
               className="fa-brands fa-youtube fs-1 text-white mx-lg-3"

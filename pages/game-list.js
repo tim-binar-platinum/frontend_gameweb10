@@ -1,6 +1,4 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable import/no-duplicates */
+
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
